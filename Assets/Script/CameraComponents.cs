@@ -48,5 +48,11 @@ public class CameraComponents : MonoBehaviour {
 			
 			currPS = null;
 		}
+
+
+		if (Input.GetKeyDown(KeyCode.Escape)) {
+			Application.Quit();
+		}
+
 	}
 }
