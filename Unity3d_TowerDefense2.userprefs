@@ -1,8 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\CameraComponents.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\TriggerAttack.cs">
     <Files>
-      <File FileName="Assets\Script\CameraComponents.cs" Line="54" Column="22" />
+      <File FileName="Assets\Script\Bullet.cs" Line="13" Column="2" />
+      <File FileName="Assets\Script\TriggerAttack.cs" Line="57" Column="22" />
+      <File FileName="Assets\Script\Enemy.cs" Line="10" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

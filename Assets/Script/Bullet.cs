@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour {
 
 	public float Speed = 0.5f;
 	public float TimeLife = 1f;
-	public Enemy Enemy;
+	public GameObject Enemy;
 	public float damage = 25f;
 
 	float timerLife;
@@ -18,22 +18,31 @@ public class Bullet : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		timerLife -= Time.deltaTime;
 
-		Vector3 dir = Enemy.transform.position - transform.position;
-		float _speed = Speed * Time.deltaTime;
+		Debug.Log ("Bullet");
 
-		if (timerLife <= 0) {
-			
-			timerLife = TimeLife;
-			Destroy (gameObject);
+		if (Enemy) {
 
-		} else if (dir.magnitude <= _speed) {
-			Enemy.SetDamage (damage);
+			timerLife -= Time.deltaTime;
+
+			Vector3 dir = Enemy.transform.position - transform.position;
+			float _speed = Speed * Time.deltaTime;
+
+			if (timerLife <= 0) {
+
+				timerLife = TimeLife;
+				Destroy (gameObject);
+
+			} else if (dir.magnitude <= _speed) {
+				Enemy.GetComponent<Enemy>().SetDamage (damage);
+				Destroy (gameObject);
+				return;
+			}
+
+			transform.Translate (new Vector3 (0, 0, _speed));
+		} else {
 			Destroy (gameObject);
 			return;
 		}
-
-		transform.Translate (new Vector3(0, 0, _speed));
 	}
 }

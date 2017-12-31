@@ -6,10 +6,11 @@ public class Enemy : MonoBehaviour {
 
 	public float speed = 2f;
 	public float maxLife = 100f;
+	public float life;
+
 	private Transform wayPoints;
 	private Transform wayPoint;
 	private int wayPointIndex = -1;
-	private float life;
 
 	// Use this for initialization
 	void Start () {

@@ -51,8 +51,7 @@
      <Compile Include="Assets\Script\Enemy.cs" />
      <Compile Include="Assets\Script\PlatfSelect.cs" />
      <Compile Include="Assets\Script\Spawner.cs" />
-     <Compile Include="Assets\Script\Tower.cs" />
-     <Compile Include="Assets\Script\TowerPlace.cs" />
+     <Compile Include="Assets\Script\TriggerAttack.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>I:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

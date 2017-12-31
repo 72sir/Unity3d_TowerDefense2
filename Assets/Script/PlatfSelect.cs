@@ -9,38 +9,30 @@ public class PlatfSelect : MonoBehaviour {
 	public Material[] mat;
 	bool isCanBuild = true;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
 	public void MouseDown() {
 		if (isCanBuild) {
 			
-			isCanBuild = false;
 			Instantiate (tower, transform.position, transform.rotation);
 			GetComponent<Renderer> ().material.color = mat[1].color;
+
+			isCanBuild = false;
 		}
 	}
 
 	public void MouseUp() {
-		Debug.Log ("MouseUp");
+
+			GetComponent<Renderer> ().material.color = mat[0].color;
 
 	}
 
 	public void MouseEnter() {
 		if (isCanBuild)
-		GetComponent<Renderer> ().material.color = mat[0].color;
+			GetComponent<Renderer> ().material.color = mat[0].color;
 	}
 
 	public void MouseLeave() {
 		if (isCanBuild)
-		GetComponent<Renderer> ().material.color = mat[1].color;
+			GetComponent<Renderer> ().material.color = mat[1].color;
 	}
 
 }
